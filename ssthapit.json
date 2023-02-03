@@ -1,0 +1,47 @@
+{
+    "accountId": "act_YYYY",
+    "contractId": "ctr_YYYY",
+    "groupId": "grp_YYYY",
+    "ruleFormat": "latest",
+    "propertyId": "prp_YYYYX",
+    "propertyName": "property_name",
+    "propertyVersion": 1,
+    "rules": {
+        "name": "default",
+        "children": [
+            {
+                "name": "Parent Rule",
+                "children": [
+                    {
+                        "name": "Child Rule 1",
+                        "children": [],
+                        "behaviors": [],
+                        "criteria": [],
+                        "criteriaMustSatisfy": "all",
+                        "comments": ""
+                    },
+                    {
+                        "name": "Child Rule 2",
+                        "children": [],
+                        "behaviors": [],
+                        "criteria": [],
+                        "criteriaMustSatisfy": "all",
+                        "comments": ""
+                    }
+                ],
+                "behaviors": [],
+                "criteria": [],
+                "criteriaMustSatisfy": "all",
+                "comments": ""
+            }
+        ],
+        "behaviors": [
+            
+        ],
+        "options": {
+            "is_secure": true
+        },
+        "variables": [],
+        "comments": ""
+    }
+}
