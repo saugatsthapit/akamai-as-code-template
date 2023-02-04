@@ -1,1 +1,1 @@
-This repo has a template file
+Saugat's Akamai as a Code Lab
