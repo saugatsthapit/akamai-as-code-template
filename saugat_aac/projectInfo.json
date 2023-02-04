@@ -1,0 +1,16 @@
+{
+    "productId": "Fresca",
+    "contractId": "1-1NC95D",
+    "groupIds": [
+        229585
+    ],
+    "environments": [
+        "prod"
+    ],
+    "version": "0.7.8-RELEASE",
+    "isSecure": false,
+    "edgeGridConfig": {
+        "section": "default"
+    },
+    "name": "saugat_aac"
+}

@@ -1,0 +1,12 @@
+{
+    "definitions": {
+        "originHostname": {
+            "type": "hostname",
+            "default": null
+        },
+        "sureRouteTestObject": {
+            "type": "url",
+            "default": "/akamai/sure-route-test-object.html"
+        }
+    }
+}
