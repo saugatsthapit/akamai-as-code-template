@@ -6,7 +6,8 @@
             "#include:Caching.json",
             "#include:Blue_origin.json",
             "#include:Green_origin.json",
-            "#include:Deny_staging.json"
+            "#include:Deny_staging.json",
+            "#include:generate_Random.json"
         ],
         "behaviors": [
             {
