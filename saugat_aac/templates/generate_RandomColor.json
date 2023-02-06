@@ -1,0 +1,107 @@
+{
+    "name": "Random color",
+    "children": [
+        {
+            "name": "blueOrigin",
+            "children": [],
+            "behaviors": [
+                {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "{env.blueOriginHostname}",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            ],
+            "criteria": [
+                {
+                    "name": "matchVariable",
+                    "options": {
+                        "matchOperator": "IS_LESS_THAN_OR_EQUAL_TO",
+                        "variableName": "PMUSER_RANDOM_COLOR",
+                        "variableExpression": "50"
+                    }
+                }
+            ],
+            "criteriaMustSatisfy": "all",
+            "comments": ""
+        },
+        {
+            "name": "greenOrigin",
+            "children": [],
+            "behaviors": [
+                {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "{env.greenOriginHostname}",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            ],
+            "criteria": [
+                {
+                    "name": "matchVariable",
+                    "options": {
+                        "matchOperator": "IS_GREATER_THAN",
+                        "variableName": "PMUSER_RANDOM_COLOR",
+                        "variableExpression": "50"
+                    }
+                }
+            ],
+            "criteriaMustSatisfy": "all",
+            "comments": ""
+        }
+    ],
+    "behaviors": [
+        {
+            "name": "setVariable",
+            "options": {
+                "valueSource": "GENERATE",
+                "transform": "NONE",
+                "variableName": "PMUSER_RANDOM_COLOR",
+                "generator": "RAND",
+                "minRandomNumber": "1",
+                "maxRandomNumber": "100"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": [
+                    "/randomcolor/"
+                ],
+                "normalize": false
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

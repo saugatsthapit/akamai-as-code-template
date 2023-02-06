@@ -7,7 +7,8 @@
             "#include:Blue_origin.json",
             "#include:Green_origin.json",
             "#include:Deny_staging.json",
-            "#include:generate_Random.json"
+            "#include:generate_Random.json",
+            "#include:generate_RandomColor.json"
         ],
         "behaviors": [
             {
