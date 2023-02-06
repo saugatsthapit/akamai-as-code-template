@@ -8,7 +8,9 @@
             "#include:Green_origin.json",
             "#include:Deny_staging.json",
             "#include:generate_Random.json",
-            "#include:generate_RandomColor.json"
+            "#include:generate_RandomColor.json",
+            "#include:akamaizer.json",
+            "#include:Deny_all.json"
         ],
         "behaviors": [
             {

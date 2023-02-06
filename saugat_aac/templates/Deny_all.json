@@ -1,5 +1,5 @@
 {
-    "name": "Deny on Staging",
+    "name": "Deny All",
     "children": [],
     "behaviors": [
         {
@@ -18,17 +18,10 @@
                 "matchWildcardName": false,
                 "matchWildcardValue": false,
                 "matchCaseSensitiveValue": true,
-                "headerName": "x-stg-auth",
+                "headerName": "x-uid",
                 "values": [
-                    "{env.stagingReqHeader}"
+                    "{env.authReqHeader}"
                 ]
-            }
-        },
-        {
-            "name": "contentDeliveryNetwork",
-            "options": {
-                "matchOperator": "IS",
-                "network": "STAGING"
             }
         }
     ],
