@@ -96,7 +96,7 @@
                 "matchOperator": "MATCHES_ONE_OF",
                 "matchCaseSensitive": false,
                 "values": [
-                    "/randomcolor/"
+                    "/randomcolor/*"
                 ],
                 "normalize": false
             }

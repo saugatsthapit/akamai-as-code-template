@@ -134,7 +134,7 @@
                 "matchOperator": "MATCHES_ONE_OF",
                 "matchCaseSensitive": false,
                 "values": [
-                    "/random/"
+                    "/random/*"
                 ],
                 "normalize": false
             }

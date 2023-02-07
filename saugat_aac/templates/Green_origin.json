@@ -29,7 +29,7 @@
                 "matchOperator": "MATCHES_ONE_OF",
                 "matchCaseSensitive": false,
                 "values": [
-                    "/origin1/"
+                    "/origin1/*"
                 ],
                 "normalize": false
             }

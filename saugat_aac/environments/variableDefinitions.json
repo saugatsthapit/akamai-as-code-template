@@ -30,7 +30,7 @@
           },
         "cache":{
             "type": "userVariableValue",
-            "default": "10h"
+            "default": "1s"
         }
     }
 }

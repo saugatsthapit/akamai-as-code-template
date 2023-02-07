@@ -41,6 +41,12 @@
                     "description": "ion.devops-training.ranet.me"
                     }
                 }
+            },
+            {
+                "name": "caching",
+                "options": {
+                    "behavior": "NO_STORE"
+                }
             }
         ],
         "options": {
