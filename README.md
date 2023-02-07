@@ -49,7 +49,7 @@ List of Edge Hostnames created:
 Staging without Spoofing strategy:
 - CNAMED to edgekey-staging.net in DNS zone
 
-P.S -> You can find the logs in all .log files.
+P.S -> You can find the logs inside Logs Folder.
 
 
 
