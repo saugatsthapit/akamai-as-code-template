@@ -23,6 +23,14 @@
         "defaultCpCode": {
             "type": "cpCode",
             "default": null
+        },
+        "FileMatch": {
+            "type": "default",
+            "default": ["css", "js", "woff"]
+          },
+        "cache":{
+            "type": "userVariableValue",
+            "default": "10h"
         }
     }
 }

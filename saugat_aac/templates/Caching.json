@@ -4,11 +4,23 @@
         {
             "name": "caching",
             "options": {
-                "behavior": "NO_STORE"
+                "behavior": "MAX_AGE",
+                "mustRevalidate": false,
+                "ttl": "${env.cache}"
             }
         }
     ],
-    "criteria": [],
+    "criteria": [
+        {
+            "name": "fileExtension",
+            "options": {
+                "matchOperator": "IS_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": "${env.FileMatch}"
+            }
+        }
+
+    ],
     "criteriaMustSatisfy": "all",
     "comments": "Caching"
 }

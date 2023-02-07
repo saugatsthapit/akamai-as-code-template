@@ -4,5 +4,8 @@
     "blueOriginHostname": "blue.ssthapit.training.ranet.me",
     "authReqHeader": "c3N0aGFwaXQ=",
     "stagingReqHeader":"EC1ZDGCTYXV0AA",
-    "defaultCpCode":"1430518"
+    "defaultCpCode":"1430518",
+    "cache": "1h",
+    "FileMatch": ["css", "js", "woff"]
+
 }
