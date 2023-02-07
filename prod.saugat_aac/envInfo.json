@@ -1,0 +1,253 @@
+{
+    "name": "prod.saugat_aac",
+    "propertyId": 881724,
+    "propertyName": "prod.saugat_aac",
+    "groupId": 229585,
+    "isSecure": true,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "ssthapit",
+        "updatedDate": "2023-02-07T00:23:43Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "PENDING",
+        "productId": "prd_Fresca",
+        "ruleFormat": "v2023-01-05"
+    },
+    "environmentHash": "59582392e5a5c3199d7ddd088b5a7989ecf58eaeef8289f18fab4c2fd6f02695",
+    "ruleTreeHash": "eef5e68f9554b92e14f1ae4e325d8e5a8ca8199d08664b41bee5ab8b86f4aa05",
+    "lastSaveWarnings": [
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "config-snippets/main.json",
+                "variables": [],
+                "location": "rules/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "default.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `default.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "config-snippets/Blue_origin.json",
+                "variables": [],
+                "location": "behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "blue.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `blue.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "config-snippets/Green_origin.json",
+                "variables": [],
+                "location": "behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "green.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `green.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "config-snippets/generate_Random.json",
+                "variables": [],
+                "location": "children/0/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "green.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `green.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "config-snippets/generate_Random.json",
+                "variables": [],
+                "location": "children/1/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "blue.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `blue.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "config-snippets/generate_Random.json",
+                "variables": [],
+                "location": "children/2/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "default.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `default.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "config-snippets/generate_RandomColor.json",
+                "variables": [],
+                "location": "children/0/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "blue.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `blue.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "config-snippets/generate_RandomColor.json",
+                "variables": [],
+                "location": "children/1/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "green.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `green.ssthapit.training.ranet.me`."
+        }
+    ],
+    "lastSaveErrors": [],
+    "lastSaveHostnameErrors": [],
+    "lastSaveHostnameWarnings": [],
+    "lastSavedHostnamesHash": "6ae4645a88a9f4c5313339dc82bc6af0caff7132dcbf5bb42cf6a0b03a230020",
+    "lastSavedHash": "59582392e5a5c3199d7ddd088b5a7989ecf58eaeef8289f18fab4c2fd6f02695",
+    "lastValidatedHash": "59582392e5a5c3199d7ddd088b5a7989ecf58eaeef8289f18fab4c2fd6f02695",
+    "pendingActivations": {
+        "STAGING": 12600242
+    }
+}

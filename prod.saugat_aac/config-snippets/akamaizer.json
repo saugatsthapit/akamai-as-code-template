@@ -1,0 +1,30 @@
+{
+    "name": "Akamaizer",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "advanced",
+            "options": {
+                "description": "Akamaizer Implementation",
+                "xml": "<edgecomputing:processor>\n  <value>akamaizer</value>\n  <allow-akamaizer>on</allow-akamaizer>\n  <status>on</status>\n</edgecomputing:processor>\n<edgecomputing:akamaizer>\n  <tag-filter>\n    <rule>#Request Information#Akamai Details - Headers Received:#</rule>\n    <tags>h1</tags>\n    <onmatch>stop</onmatch>\n    <scope>block</scope>\n    <type>include</type>\n  </tag-filter>\n  <tag-filter>\n    <rule>#Field#Information / Field#</rule>\n    <tags>th</tags>\n    <onmatch>stop</onmatch>\n    <scope>block</scope>\n    <type>include</type>\n  </tag-filter>\n  <tag-filter>\n    <rule>#Value#Information / Value#</rule>\n    <tags>th</tags>\n    <onmatch>stop</onmatch>\n    <scope>block</scope>\n    <type>include</type>\n  </tag-filter>\n</edgecomputing:akamaizer>"
+            },
+            "uuid": "fa4a2ca0-c31c-4c2f-84cb-fe9a737f76a3"
+        }
+    ],
+    "uuid": "0eda506d-ba32-46a1-bf10-40650de9598e",
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": [
+                    "/akamaizer/"
+                ],
+                "normalize": false
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

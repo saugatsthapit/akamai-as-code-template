@@ -1,0 +1,520 @@
+{
+    "rules": {
+        "name": "default",
+        "children": [
+            {
+                "name": "Remove Vary Header",
+                "behaviors": [
+                    {
+                        "name": "removeVary",
+                        "options": {
+                            "enabled": true
+                        }
+                    }
+                ],
+                "criteria": [],
+                "criteriaMustSatisfy": "all",
+                "comments": "Controlling Vary Header"
+            },
+            {
+                "name": "Default Caching",
+                "behaviors": [
+                    {
+                        "name": "caching",
+                        "options": {
+                            "behavior": "NO_STORE"
+                        }
+                    }
+                ],
+                "criteria": [],
+                "criteriaMustSatisfy": "all",
+                "comments": "Caching"
+            },
+            {
+                "name": "Blue Origin",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "origin",
+                        "options": {
+                            "originType": "CUSTOMER",
+                            "forwardHostHeader": "REQUEST_HOST_HEADER",
+                            "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                            "compress": true,
+                            "enableTrueClientIp": true,
+                            "trueClientIpHeader": "True-Client-IP",
+                            "trueClientIpClientSetting": false,
+                            "verificationMode": "PLATFORM_SETTINGS",
+                            "originSni": false,
+                            "httpPort": 80,
+                            "httpsPort": 443,
+                            "hostname": "blue.ssthapit.training.ranet.me",
+                            "originCertificate": "",
+                            "ports": ""
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "path",
+                        "options": {
+                            "matchOperator": "MATCHES_ONE_OF",
+                            "matchCaseSensitive": false,
+                            "values": [
+                                "/origin2/"
+                            ],
+                            "normalize": false
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": ""
+            },
+            {
+                "name": "Green Origin",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "origin",
+                        "options": {
+                            "originType": "CUSTOMER",
+                            "forwardHostHeader": "REQUEST_HOST_HEADER",
+                            "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                            "compress": true,
+                            "enableTrueClientIp": true,
+                            "trueClientIpHeader": "True-Client-IP",
+                            "trueClientIpClientSetting": false,
+                            "verificationMode": "PLATFORM_SETTINGS",
+                            "originSni": false,
+                            "httpPort": 80,
+                            "httpsPort": 443,
+                            "hostname": "green.ssthapit.training.ranet.me",
+                            "originCertificate": "",
+                            "ports": ""
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "path",
+                        "options": {
+                            "matchOperator": "MATCHES_ONE_OF",
+                            "matchCaseSensitive": false,
+                            "values": [
+                                "/origin1/"
+                            ],
+                            "normalize": false
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": ""
+            },
+            {
+                "name": "Deny on Staging",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "denyAccess",
+                        "options": {
+                            "reason": "No-auth-Request-Header",
+                            "enabled": true
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "requestHeader",
+                        "options": {
+                            "matchOperator": "IS_NOT_ONE_OF",
+                            "matchWildcardName": false,
+                            "matchWildcardValue": false,
+                            "matchCaseSensitiveValue": true,
+                            "headerName": "x-stg-auth",
+                            "values": [
+                                "EC1ZDGCTYXV0AA"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "contentDeliveryNetwork",
+                        "options": {
+                            "matchOperator": "IS",
+                            "network": "STAGING"
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": ""
+            },
+            {
+                "name": "Generate Random",
+                "children": [
+                    {
+                        "name": "<33",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "origin",
+                                "options": {
+                                    "originType": "CUSTOMER",
+                                    "forwardHostHeader": "REQUEST_HOST_HEADER",
+                                    "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                                    "compress": true,
+                                    "enableTrueClientIp": true,
+                                    "trueClientIpHeader": "True-Client-IP",
+                                    "trueClientIpClientSetting": false,
+                                    "verificationMode": "PLATFORM_SETTINGS",
+                                    "originSni": false,
+                                    "httpPort": 80,
+                                    "httpsPort": 443,
+                                    "hostname": "green.ssthapit.training.ranet.me",
+                                    "originCertificate": "",
+                                    "ports": ""
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "matchVariable",
+                                "options": {
+                                    "matchOperator": "IS_LESS_THAN_OR_EQUAL_TO",
+                                    "variableName": "PMUSER_RANDOM",
+                                    "variableExpression": "32"
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "all",
+                        "comments": ""
+                    },
+                    {
+                        "name": ">33 and <66",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "origin",
+                                "options": {
+                                    "originType": "CUSTOMER",
+                                    "forwardHostHeader": "REQUEST_HOST_HEADER",
+                                    "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                                    "compress": true,
+                                    "enableTrueClientIp": true,
+                                    "trueClientIpHeader": "True-Client-IP",
+                                    "trueClientIpClientSetting": false,
+                                    "verificationMode": "PLATFORM_SETTINGS",
+                                    "originSni": false,
+                                    "httpPort": 80,
+                                    "httpsPort": 443,
+                                    "hostname": "blue.ssthapit.training.ranet.me",
+                                    "originCertificate": "",
+                                    "ports": ""
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "matchVariable",
+                                "options": {
+                                    "matchOperator": "IS_BETWEEN",
+                                    "variableName": "PMUSER_RANDOM",
+                                    "lowerBound": "33",
+                                    "upperBound": "65"
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "all",
+                        "comments": ""
+                    },
+                    {
+                        "name": ">66",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "origin",
+                                "options": {
+                                    "originType": "CUSTOMER",
+                                    "forwardHostHeader": "REQUEST_HOST_HEADER",
+                                    "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                                    "compress": true,
+                                    "enableTrueClientIp": true,
+                                    "trueClientIpHeader": "True-Client-IP",
+                                    "trueClientIpClientSetting": false,
+                                    "verificationMode": "PLATFORM_SETTINGS",
+                                    "originSni": false,
+                                    "httpPort": 80,
+                                    "httpsPort": 443,
+                                    "hostname": "default.ssthapit.training.ranet.me",
+                                    "originCertificate": "",
+                                    "ports": ""
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "matchVariable",
+                                "options": {
+                                    "matchOperator": "IS_GREATER_THAN_OR_EQUAL_TO",
+                                    "variableName": "PMUSER_RANDOM",
+                                    "variableExpression": "66"
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "all",
+                        "comments": ""
+                    }
+                ],
+                "behaviors": [
+                    {
+                        "name": "setVariable",
+                        "options": {
+                            "valueSource": "GENERATE",
+                            "transform": "NONE",
+                            "variableName": "PMUSER_RANDOM",
+                            "generator": "RAND",
+                            "minRandomNumber": "1",
+                            "maxRandomNumber": "100"
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "path",
+                        "options": {
+                            "matchOperator": "MATCHES_ONE_OF",
+                            "matchCaseSensitive": false,
+                            "values": [
+                                "/random/"
+                            ],
+                            "normalize": false
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": ""
+            },
+            {
+                "name": "Random color",
+                "children": [
+                    {
+                        "name": "blueOrigin",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "origin",
+                                "options": {
+                                    "originType": "CUSTOMER",
+                                    "forwardHostHeader": "REQUEST_HOST_HEADER",
+                                    "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                                    "compress": true,
+                                    "enableTrueClientIp": true,
+                                    "trueClientIpHeader": "True-Client-IP",
+                                    "trueClientIpClientSetting": false,
+                                    "verificationMode": "PLATFORM_SETTINGS",
+                                    "originSni": false,
+                                    "httpPort": 80,
+                                    "httpsPort": 443,
+                                    "hostname": "blue.ssthapit.training.ranet.me",
+                                    "originCertificate": "",
+                                    "ports": ""
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "matchVariable",
+                                "options": {
+                                    "matchOperator": "IS_LESS_THAN_OR_EQUAL_TO",
+                                    "variableName": "PMUSER_RANDOM_COLOR",
+                                    "variableExpression": "50"
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "all",
+                        "comments": ""
+                    },
+                    {
+                        "name": "greenOrigin",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "origin",
+                                "options": {
+                                    "originType": "CUSTOMER",
+                                    "forwardHostHeader": "REQUEST_HOST_HEADER",
+                                    "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                                    "compress": true,
+                                    "enableTrueClientIp": true,
+                                    "trueClientIpHeader": "True-Client-IP",
+                                    "trueClientIpClientSetting": false,
+                                    "verificationMode": "PLATFORM_SETTINGS",
+                                    "originSni": false,
+                                    "httpPort": 80,
+                                    "httpsPort": 443,
+                                    "hostname": "green.ssthapit.training.ranet.me",
+                                    "originCertificate": "",
+                                    "ports": ""
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "matchVariable",
+                                "options": {
+                                    "matchOperator": "IS_GREATER_THAN",
+                                    "variableName": "PMUSER_RANDOM_COLOR",
+                                    "variableExpression": "50"
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "all",
+                        "comments": ""
+                    }
+                ],
+                "behaviors": [
+                    {
+                        "name": "setVariable",
+                        "options": {
+                            "valueSource": "GENERATE",
+                            "transform": "NONE",
+                            "variableName": "PMUSER_RANDOM_COLOR",
+                            "generator": "RAND",
+                            "minRandomNumber": "1",
+                            "maxRandomNumber": "100"
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "path",
+                        "options": {
+                            "matchOperator": "MATCHES_ONE_OF",
+                            "matchCaseSensitive": false,
+                            "values": [
+                                "/randomcolor/"
+                            ],
+                            "normalize": false
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": ""
+            },
+            {
+                "name": "Akamaizer",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "advanced",
+                        "options": {
+                            "description": "Akamaizer Implementation",
+                            "xml": "<edgecomputing:processor>\n  <value>akamaizer</value>\n  <allow-akamaizer>on</allow-akamaizer>\n  <status>on</status>\n</edgecomputing:processor>\n<edgecomputing:akamaizer>\n  <tag-filter>\n    <rule>#Request Information#Akamai Details - Headers Received:#</rule>\n    <tags>h1</tags>\n    <onmatch>stop</onmatch>\n    <scope>block</scope>\n    <type>include</type>\n  </tag-filter>\n  <tag-filter>\n    <rule>#Field#Information / Field#</rule>\n    <tags>th</tags>\n    <onmatch>stop</onmatch>\n    <scope>block</scope>\n    <type>include</type>\n  </tag-filter>\n  <tag-filter>\n    <rule>#Value#Information / Value#</rule>\n    <tags>th</tags>\n    <onmatch>stop</onmatch>\n    <scope>block</scope>\n    <type>include</type>\n  </tag-filter>\n</edgecomputing:akamaizer>"
+                        },
+                        "uuid": "fa4a2ca0-c31c-4c2f-84cb-fe9a737f76a3"
+                    }
+                ],
+                "uuid": "0eda506d-ba32-46a1-bf10-40650de9598e",
+                "criteria": [
+                    {
+                        "name": "path",
+                        "options": {
+                            "matchOperator": "MATCHES_ONE_OF",
+                            "matchCaseSensitive": false,
+                            "values": [
+                                "/akamaizer/"
+                            ],
+                            "normalize": false
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": ""
+            },
+            {
+                "name": "Deny All",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "denyAccess",
+                        "options": {
+                            "reason": "No-auth-Request-Header",
+                            "enabled": true
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "requestHeader",
+                        "options": {
+                            "matchOperator": "IS_NOT_ONE_OF",
+                            "matchWildcardName": false,
+                            "matchWildcardValue": false,
+                            "matchCaseSensitiveValue": true,
+                            "headerName": "x-uid",
+                            "values": [
+                                "c3N0aGFwaXQ="
+                            ]
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": ""
+            }
+        ],
+        "behaviors": [
+            {
+                "name": "origin",
+                "options": {
+                    "originType": "CUSTOMER",
+                    "forwardHostHeader": "REQUEST_HOST_HEADER",
+                    "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                    "compress": true,
+                    "enableTrueClientIp": true,
+                    "trueClientIpHeader": "True-Client-IP",
+                    "trueClientIpClientSetting": false,
+                    "verificationMode": "PLATFORM_SETTINGS",
+                    "originSni": false,
+                    "httpPort": 80,
+                    "httpsPort": 443,
+                    "hostname": "default.ssthapit.training.ranet.me",
+                    "originCertificate": "",
+                    "ports": ""
+                }
+            },
+            {
+                "name": "cpCode",
+                "options": {
+                    "value": {
+                        "id": 1430518,
+                        "description": "ion.devops-training.ranet.me",
+                        "products": [
+                            "Fresca"
+                        ],
+                        "createdDate": 1674671504000,
+                        "cpCodeLimits": null,
+                        "name": "ion.devops-training.ranet.me"
+                    }
+                }
+            }
+        ],
+        "options": {
+            "is_secure": true
+        },
+        "variables": [
+            {
+                "name": "PMUSER_RANDOM_COLOR",
+                "value": "",
+                "description": "",
+                "hidden": false,
+                "sensitive": false
+            },
+            {
+                "name": "PMUSER_RANDOM",
+                "value": "",
+                "description": "",
+                "hidden": false,
+                "sensitive": false
+            }
+        ],
+        "comments": "The Default Rule template contains all the necessary and recommended behaviors. Rules are evaluated from top to bottom and the last matching rule wins."
+    }
+}

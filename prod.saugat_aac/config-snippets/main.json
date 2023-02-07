@@ -1,0 +1,72 @@
+{
+    "rules": {
+        "name": "default",
+        "children": [
+            "#include:Remove_vary_header.json",
+            "#include:Caching.json",
+            "#include:Blue_origin.json",
+            "#include:Green_origin.json",
+            "#include:Deny_staging.json",
+            "#include:generate_Random.json",
+            "#include:generate_RandomColor.json",
+            "#include:akamaizer.json",
+            "#include:Deny_all.json"
+        ],
+        "behaviors": [
+            {
+                "name": "origin",
+                "options": {
+                    "originType": "CUSTOMER",
+                    "forwardHostHeader": "REQUEST_HOST_HEADER",
+                    "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                    "compress": true,
+                    "enableTrueClientIp": true,
+                    "trueClientIpHeader": "True-Client-IP",
+                    "trueClientIpClientSetting": false,
+                    "verificationMode": "PLATFORM_SETTINGS",
+                    "originSni": false,
+                    "httpPort": 80,
+                    "httpsPort": 443,
+                    "hostname": "default.ssthapit.training.ranet.me",
+                    "originCertificate": "",
+                    "ports": ""
+                }
+            },
+            {
+                "name": "cpCode",
+                "options": {
+                    "value": {
+                        "id": 1430518,
+                        "description": "ion.devops-training.ranet.me",
+                        "products": [
+                            "Fresca"
+                        ],
+                        "createdDate": 1674671504000,
+                        "cpCodeLimits": null,
+                        "name": "ion.devops-training.ranet.me"
+                    }
+                }
+            }
+        ],
+        "options": {
+            "is_secure": true
+        },
+        "variables": [
+            {
+                "name": "PMUSER_RANDOM_COLOR",
+                "value": "",
+                "description": "",
+                "hidden": false,
+                "sensitive": false
+            },
+            {
+                "name": "PMUSER_RANDOM",
+                "value": "",
+                "description": "",
+                "hidden": false,
+                "sensitive": false
+            }
+        ],
+        "comments": "The Default Rule template contains all the necessary and recommended behaviors. Rules are evaluated from top to bottom and the last matching rule wins."
+    }
+}

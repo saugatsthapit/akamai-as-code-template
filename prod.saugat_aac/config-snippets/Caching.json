@@ -1,0 +1,14 @@
+{
+    "name": "Default Caching",
+    "behaviors": [
+        {
+            "name": "caching",
+            "options": {
+                "behavior": "NO_STORE"
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": "Caching"
+}
