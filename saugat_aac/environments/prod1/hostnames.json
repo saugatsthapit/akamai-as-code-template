@@ -19,5 +19,5 @@
         "cnameFrom": "prod1.green.ssthapit.training.ranet.me",
         "cnameTo": "ssthapit3.edgekey.net",
         "certProvisioningType": "CPS_MANAGED"
-
+    }
 ]
