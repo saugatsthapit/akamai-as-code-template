@@ -2,21 +2,21 @@
     {
         "cnameType": "EDGE_HOSTNAME",
         "edgeHostnameId": 4941101,
-        "cnameFrom": "blue.ssthapit.training.ranet.me",
+        "cnameFrom": "qa.blue.ssthapit.training-staging.ranet.me",
         "cnameTo": "ssthapit3.edgekey.net",
         "certProvisioningType": "CPS_MANAGED"
     },
     {
         "cnameType": "EDGE_HOSTNAME",
         "edgeHostnameId": 4941101,
-        "cnameFrom": "default.ssthapit.training.ranet.me",
+        "cnameFrom": "qa.default.ssthapit.training-staging.ranet.me",
         "cnameTo": "ssthapit3.edgekey.net",
         "certProvisioningType": "CPS_MANAGED"
     },
     {
         "cnameType": "EDGE_HOSTNAME",
         "edgeHostnameId": 4941101,
-        "cnameFrom": "green.ssthapit.training.ranet.me",
+        "cnameFrom": "qa.green.ssthapit.training-staging.ranet.me",
         "cnameTo": "ssthapit3.edgekey.net",
         "certProvisioningType": "CPS_MANAGED"
     }

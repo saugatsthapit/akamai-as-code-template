@@ -5,9 +5,9 @@
     "isSecure": false,
     "propertyId": 882559,
     "latestVersionInfo": {
-        "propertyVersion": 1,
+        "propertyVersion": 5,
         "updatedByUser": "ssthapit",
-        "updatedDate": "2023-02-07T05:59:49Z",
+        "updatedDate": "2023-02-07T07:58:47Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "PENDING",
         "productId": "prd_Fresca",
@@ -247,8 +247,18 @@
     "lastSaveErrors": [],
     "lastSaveHostnameErrors": [],
     "lastSaveHostnameWarnings": [],
-    "lastSavedHostnamesHash": "4d08798b0b3fdde413cee82b7030ef2732473ed1a93d99492e2958264fe97d5c",
+    "lastSavedHostnamesHash": "3157b2f98ddc3c0182148eda73ee54417638c974aad686467838d430c9073dbe",
+    "activeIn_STAGING_Info": {
+        "propertyVersion": 3,
+        "updatedByUser": "ssthapit",
+        "updatedDate": "2023-02-07T07:36:40Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "DEACTIVATED",
+        "etag": "0d2fd1d19caaad46344c5971f074926278ffce5f",
+        "productId": "prd_Fresca",
+        "ruleFormat": "v2023-01-05"
+    },
     "pendingActivations": {
-        "STAGING": 12600840
+        "STAGING": 12601157
     }
 }

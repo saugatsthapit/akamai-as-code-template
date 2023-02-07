@@ -1,13 +1,13 @@
 {
-    "name": "dev",
-    "propertyName": "dev.saugat_aac",
+    "name": "prod1",
+    "propertyName": "prod1.saugat_aac",
     "groupId": 229585,
     "isSecure": false,
-    "propertyId": 882560,
+    "propertyId": 882607,
     "latestVersionInfo": {
-        "propertyVersion": 4,
+        "propertyVersion": 3,
         "updatedByUser": "ssthapit",
-        "updatedDate": "2023-02-07T07:59:42Z",
+        "updatedDate": "2023-02-07T07:59:15Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "PENDING",
         "productId": "prd_Fresca",
@@ -22,18 +22,18 @@
     "lastSaveErrors": [],
     "lastSaveHostnameErrors": [],
     "lastSaveHostnameWarnings": [],
-    "lastSavedHostnamesHash": "6d66876a5648b2fb214e4f6aa4bf5dbac0879728bea93c39b7c4d1276193253e",
+    "lastSavedHostnamesHash": "39dc0f99e2fca508bf3527d6810c42f0658a99cd0db0277a6bd9344bfe2a53c0",
     "activeIn_STAGING_Info": {
-        "propertyVersion": 3,
+        "propertyVersion": 1,
         "updatedByUser": "ssthapit",
-        "updatedDate": "2023-02-07T07:55:07Z",
+        "updatedDate": "2023-02-07T07:47:40Z",
         "productionStatus": "INACTIVE",
-        "stagingStatus": "ACTIVE",
-        "etag": "49185e81478f2a5f2578d72fcd340e4426244ad0",
+        "stagingStatus": "DEACTIVATED",
+        "etag": "e7e6c46b9a93e9892870a283ace88b62daf5f513",
         "productId": "prd_Fresca",
         "ruleFormat": "v2023-01-05"
     },
     "pendingActivations": {
-        "STAGING": 12601169
+        "STAGING": 12601161
     }
 }

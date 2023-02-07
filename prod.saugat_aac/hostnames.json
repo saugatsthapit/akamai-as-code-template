@@ -2,7 +2,7 @@
     {
         "cnameType": "EDGE_HOSTNAME",
         "edgeHostnameId": 4941101,
-        "cnameFrom": "blue.ssthapit.training.ranet.me",
+        "cnameFrom": "blue.ssthapit.training-staging.ranet.me",
         "cnameTo": "ssthapit3.edgekey.net",
         "certProvisioningType": "DEFAULT",
         "certStatus": {
@@ -17,7 +17,7 @@
                 }
             ],
             "validationCname": {
-                "hostname": "_acme-challenge.blue.ssthapit.training.ranet.me",
+                "hostname": "_acme-challenge.blue.ssthapit.trainingranet.me",
                 "target": "ac.6f304de73f87a6762f85b6fa20c0d444.blue.ssthapit.training.ranet.me.validate-akdv.net"
             }
         }
@@ -25,7 +25,7 @@
     {
         "cnameType": "EDGE_HOSTNAME",
         "edgeHostnameId": 4941101,
-        "cnameFrom": "default.ssthapit.training.ranet.me",
+        "cnameFrom": "default.ssthapit.training-staging.ranet.me",
         "cnameTo": "ssthapit3.edgekey.net",
         "certProvisioningType": "DEFAULT",
         "certStatus": {
@@ -48,7 +48,7 @@
     {
         "cnameType": "EDGE_HOSTNAME",
         "edgeHostnameId": 4941101,
-        "cnameFrom": "green.ssthapit.training.ranet.me",
+        "cnameFrom": "green.ssthapit.training-staging.ranet.me",
         "cnameTo": "ssthapit3.edgekey.net",
         "certProvisioningType": "DEFAULT",
         "certStatus": {

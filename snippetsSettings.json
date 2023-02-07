@@ -1,8 +1,10 @@
 {
     "edgeGridConfig": {
-        "section": "default"
+        "section": "default",
+        "accountSwitchKey": "1-6JHGX:1-8BYUX"
     },
     "emails": [
         "ssthapit@akamai.com"
-    ]
+    ],
+    "outputFormat": "json"
 }

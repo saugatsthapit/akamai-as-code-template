@@ -7,7 +7,8 @@
     "environments": [
         "qa",
         "prod",
-        "dev"
+        "dev",
+        "prod1"
     ],
     "version": "0.7.8-RELEASE",
     "isSecure": false,
