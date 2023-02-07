@@ -1,4 +1,8 @@
 {
-    "originHostname": "origin-dev.saugat_aac",
-    "sureRouteTestObject": null
+    "defaultOriginHostname": "default.ssthapit.training.ranet.me",
+    "greeOriginHostname": "green.ssthapit.training.ranet.me",
+    "blueOriginHostname": "blue.ssthapit.training.ranet.me",
+    "authReqHeader": "c3N0aGFwaXQ=",
+    "stagingReqHeader":"EC1ZDGCTYXV0AA",
+    "defaultCpCode":"1430518"
 }

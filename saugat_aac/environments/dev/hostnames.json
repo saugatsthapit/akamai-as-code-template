@@ -1,7 +1,19 @@
 [
     {
-        "cnameFrom": "dev.saugat_aac",
-        "cnameTo": "dev.saugat_aac.edgesuite.net",
+        "cnameFrom": "blue.ssthapit.training.ranet.me",
+        "cnameTo": "ssthapit3.edgekey.net",
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": null
+    },
+    {
+        "cnameFrom": "green.ssthapit.training.ranet.me",
+        "cnameTo": "ssthapit3.edgekey.net",
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": null
+    },
+    {
+        "cnameFrom": "default.ssthapit.training.ranet.me",
+        "cnameTo": "ssthapit3.edgekey.net",
         "cnameType": "EDGE_HOSTNAME",
         "edgeHostnameId": null
     }
