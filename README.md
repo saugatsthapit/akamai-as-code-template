@@ -46,7 +46,7 @@ List of Edge Hostnames created:
 - Didnt create any because of contract limit. Used my existing edgehostname 
 - ssthapit-3.edgekey.net
 
-Staging without Spoofing strategy:
+Staging with Spoofing strategy:
 - CNAMED to edgekey-staging.net in DNS zone
 
 P.S -> You can find the logs inside Logs Folder.

@@ -1,8 +1,0 @@
-{
-    "defaultOriginHostname": "default.ssthapit.training.ranet.me",
-    "greenOriginHostname": "green.ssthapit.training.ranet.me",
-    "blueOriginHostname": "blue.ssthapit.training.ranet.me",
-    "authReqHeader": "c3N0aGFwaXQ=",
-    "stagingReqHeader":"EC1ZDGCTYXV0AA",
-    "defaultCpCode":"1430518"
-}
