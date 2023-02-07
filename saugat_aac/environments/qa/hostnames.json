@@ -1,0 +1,8 @@
+[
+    {
+        "cnameFrom": "qa.saugat_aac",
+        "cnameTo": "qa.saugat_aac.edgesuite.net",
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": null
+    }
+]

@@ -1,0 +1,17 @@
+{
+    "name": "qa",
+    "propertyName": "qa.saugat_aac",
+    "groupId": 229585,
+    "isSecure": false,
+    "propertyId": 882559,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "ssthapit",
+        "updatedDate": "2023-02-07T05:59:49Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "INACTIVE",
+        "productId": "prd_Fresca",
+        "ruleFormat": "v2023-01-05"
+    },
+    "suggestedRuleFormat": "v2023-01-05"
+}

@@ -5,7 +5,9 @@
         229585
     ],
     "environments": [
-        "prod"
+        "qa",
+        "prod",
+        "dev"
     ],
     "version": "0.7.8-RELEASE",
     "isSecure": false,
