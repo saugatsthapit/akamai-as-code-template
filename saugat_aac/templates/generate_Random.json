@@ -19,7 +19,7 @@
                         "originSni": false,
                         "httpPort": 80,
                         "httpsPort": 443,
-                        "hostname": "{env.greenOriginHostname}",
+                        "hostname": "${env.greenOriginHostname}",
                         "originCertificate": "",
                         "ports": ""
                     }
@@ -56,7 +56,7 @@
                         "originSni": false,
                         "httpPort": 80,
                         "httpsPort": 443,
-                        "hostname": "{env.blueOriginHostname}",
+                        "hostname": "${env.blueOriginHostname}",
                         "originCertificate": "",
                         "ports": ""
                     }
@@ -94,7 +94,7 @@
                         "originSni": false,
                         "httpPort": 80,
                         "httpsPort": 443,
-                        "hostname": "{env.defaultOriginHostname}",
+                        "hostname": "${env.defaultOriginHostname}",
                         "originCertificate": "",
                         "ports": ""
                     }

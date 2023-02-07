@@ -27,15 +27,41 @@
                     "originSni": false,
                     "httpPort": 80,
                     "httpsPort": 443,
-                    "hostname": "{env.defaultOriginHostname}",
+                    "hostname": "${env.defaultOriginHostname}",
                     "originCertificate": "",
                     "ports": ""
+                }
+            },
+            {
+                "name": "cpCode",
+                "options": {
+                    "value": {
+                    "id": 1430518,
+                    "name": "ion.devops-training.ranet.me",
+                    "description": "ion.devops-training.ranet.me"
+                    }
                 }
             }
         ],
         "options": {
             "is_secure": false
         },
+        "variables": [
+            {
+                "name": "PMUSER_RANDOM_COLOR",
+                "value": "",
+                "description": "",
+                "hidden": false,
+                "sensitive": false
+            },
+            {
+                "name": "PMUSER_RANDOM",
+                "value": "",
+                "description": "",
+                "hidden": false,
+                "sensitive": false
+            }
+        ],
         "comments": "The Default Rule template contains all the necessary and recommended behaviors. Rules are evaluated from top to bottom and the last matching rule wins."
     }
 }

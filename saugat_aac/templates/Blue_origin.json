@@ -16,7 +16,7 @@
                 "originSni": false,
                 "httpPort": 80,
                 "httpsPort": 443,
-                "hostname": "{env.blueOriginHostname}",
+                "hostname": "${env.blueOriginHostname}",
                 "originCertificate": "",
                 "ports": ""
             }

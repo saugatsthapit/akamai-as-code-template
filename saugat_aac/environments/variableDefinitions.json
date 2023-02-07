@@ -1,6 +1,28 @@
 {
-    "defaultCpCode": {
-        "type": "cpCode",
-        "default": null
-      }
+    "definitions": {
+        "defaultOriginHostname": {
+            "type": "userVariableValue",
+            "default": "default.ssthapit.training.ranet.me"
+       },
+       "greenOriginHostname": {
+        "type": "userVariableValue",
+        "default": "green.ssthapit.training.ranet.me"
+     },
+        "blueOriginHostname": {
+        "type": "userVariableValue",
+        "default": "blue.ssthapit.training.ranet.me"
+    },
+        "authReqHeader": {
+            "type": "userVariableValue",
+            "default": "c3N0aGFwaXQ="
+        },
+        "stagingReqHeader": {
+            "type": "userVariableValue",
+            "default": "EC1ZDGCTYXV0AA"
+        },
+        "defaultCpCode": {
+            "type": "cpCode",
+            "default": null
+        }
+    }
 }

@@ -20,7 +20,7 @@
                 "matchCaseSensitiveValue": true,
                 "headerName": "x-uid",
                 "values": [
-                    "{env.authReqHeader}"
+                    "${env.authReqHeader}"
                 ]
             }
         }

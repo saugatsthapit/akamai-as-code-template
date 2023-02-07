@@ -20,7 +20,7 @@
                 "matchCaseSensitiveValue": true,
                 "headerName": "x-stg-auth",
                 "values": [
-                    "{env.stagingReqHeader}"
+                    "${env.stagingReqHeader}"
                 ]
             }
         },

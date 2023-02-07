@@ -9,9 +9,246 @@
         "updatedByUser": "ssthapit",
         "updatedDate": "2023-02-07T05:59:49Z",
         "productionStatus": "INACTIVE",
-        "stagingStatus": "INACTIVE",
+        "stagingStatus": "PENDING",
         "productId": "prd_Fresca",
         "ruleFormat": "v2023-01-05"
     },
-    "suggestedRuleFormat": "v2023-01-05"
+    "suggestedRuleFormat": "v2023-01-05",
+    "environmentHash": "0764c7e51e18604f7097523e57917c66609427b11b77d3caf841f247f86e14dc",
+    "ruleTreeHash": "13ef97a299ccb0491097966aa4859627f2f19669a12371c38b4c44d693a85271",
+    "lastSavedHash": "0764c7e51e18604f7097523e57917c66609427b11b77d3caf841f247f86e14dc",
+    "lastValidatedHash": "0764c7e51e18604f7097523e57917c66609427b11b77d3caf841f247f86e14dc",
+    "lastSaveWarnings": [
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "templates/main.json",
+                "variables": [],
+                "location": "rules/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "default.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `default.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "templates/Blue_origin.json",
+                "variables": [],
+                "location": "behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "blue.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `blue.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "templates/Green_origin.json",
+                "variables": [],
+                "location": "behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "green.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `green.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "templates/generate_Random.json",
+                "variables": [],
+                "location": "children/0/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "green.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `green.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "templates/generate_Random.json",
+                "variables": [],
+                "location": "children/1/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "blue.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `blue.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "templates/generate_Random.json",
+                "variables": [],
+                "location": "children/2/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "default.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `default.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "templates/generate_RandomColor.json",
+                "variables": [],
+                "location": "children/0/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "blue.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `blue.ssthapit.training.ranet.me`."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.origin_name_hostname_overlap",
+            "errorLocation": {
+                "template": "templates/generate_RandomColor.json",
+                "variables": [],
+                "location": "children/1/behaviors/0",
+                "value": {
+                    "name": "origin",
+                    "options": {
+                        "originType": "CUSTOMER",
+                        "forwardHostHeader": "REQUEST_HOST_HEADER",
+                        "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                        "compress": true,
+                        "enableTrueClientIp": true,
+                        "trueClientIpHeader": "True-Client-IP",
+                        "trueClientIpClientSetting": false,
+                        "verificationMode": "PLATFORM_SETTINGS",
+                        "originSni": false,
+                        "httpPort": 80,
+                        "httpsPort": 443,
+                        "hostname": "green.ssthapit.training.ranet.me",
+                        "originCertificate": "",
+                        "ports": ""
+                    }
+                }
+            },
+            "detail": "Origin hostname option in `Origin Server` is set to same value as in property hostname `green.ssthapit.training.ranet.me`."
+        }
+    ],
+    "lastSaveErrors": [],
+    "lastSaveHostnameErrors": [],
+    "lastSaveHostnameWarnings": [],
+    "lastSavedHostnamesHash": "4d08798b0b3fdde413cee82b7030ef2732473ed1a93d99492e2958264fe97d5c",
+    "pendingActivations": {
+        "STAGING": 12600840
+    }
 }
